@@ -9,10 +9,10 @@ hl.bind(p.mainMod .. " + Q", hl.dsp.exec_cmd(p.terminal))
 local closeWindowBind = hl.bind(p.mainMod .. " + D", hl.dsp.window.close())
 
 -- closeWindowBind:set_enabled(false)
-hl.bind(
-	p.mainMod .. " + M",
-	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
-)
+-- hl.bind(
+-- 	p.mainMod .. " + M",
+-- 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
+-- )
 hl.bind(p.mainMod .. " + E", hl.dsp.exec_cmd(p.fileManager))
 hl.bind(p.mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(p.mainMod .. " + R", hl.dsp.exec_cmd(p.menu))
@@ -45,6 +45,8 @@ end
 -- Example special workspace (scratchpad)
 hl.bind(p.mainMod .. " + X", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(p.mainMod .. " + SHIFT + X", hl.dsp.window.move({ workspace = "special:magic" }))
+
+
 
 -- Scroll through existing workspaces with p.mainMod + scroll
 hl.bind(p.mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
@@ -79,6 +81,9 @@ hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
 
 -- Requires playerctl
+hl.bind(p.mainMod .. "+ n", hl.dsp.exec_cmd("playerctl next"), { locked = true })
+hl.bind(p.mainMod .. "+ p", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })

@@ -44,3 +44,10 @@ hl.window_rule({
     float = true,
 })
 
+
+hl.window_rule({ 
+    match = { class = "discord" }, 
+    workspace = "special:magic silent" 
+})
+
+

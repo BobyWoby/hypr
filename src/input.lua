@@ -10,6 +10,8 @@ hl.config({
 
 		sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
+		scroll_factor = 0.5,
+
 		numlock_by_default = true,
 
 		touchpad = {

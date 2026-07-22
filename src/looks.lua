@@ -47,4 +47,3 @@ hl.config({
         enabled = true,
     },
 })
-
